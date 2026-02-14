@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>偉建建築有限公司</title>
+  <meta name="description" content="偉建建築有限公司｜土木工程、建築工程、公共工程、修繕改建。品質、安全、準時交付。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container topbar-row">
+      <div class="topbar-left">
+        <span>📞 電話：+852 6026 9033</span>
+        <span class="sep">|</span>
+        <span>✉️ 信箱：beebeefivefive@gmail.com</span>
+      </div>
+      <div class="topbar-right">
+        <a href="#contact">聯絡我們</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-row">
+      <a class="brand" href="#">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-cn">偉建建築有限公司</span>
+          <span class="brand-en">Wai Kin Construction Engineeing Hong Kong Limitd </span>
+        </span>
+      </a>
+
+      <nav class="nav">
+        <a href="#about">公司簡介</a>
+        <a href="#business">業務範疇</a>
+        <a href="#projects">工程實績</a>
+        <a class="nav-cta" href="#contact">立即洽詢</a>
+      </nav>
+
+      <button class="hamburger" aria-label="開啟選單" onclick="toggleMenu()">☰</button>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="#about" onclick="toggleMenu()">公司簡介</a>
+      <a href="#business" onclick="toggleMenu()">業務範疇</a>
+      <a href="#projects" onclick="toggleMenu()">工程實績</a>
+      <a class="mobile-cta" href="#contact" onclick="toggleMenu()">立即洽詢</a>
+    </div>
+  </header>
+
+  <!-- Hero Slider -->
+  <section class="hero" aria-label="首頁輪播">
+    <div class="slider" id="slider">
+      <!-- Slide 1 -->
+      <article class="slide is-active"
+        style="--bg:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=80');">
+        <div class="overlay">
+          <div class="container hero-inner">
+            <div class="hero-kicker">品質 • 安全 • 準時交付</div>
+            <h1>以工程專業，打造安心的城市與生活</h1>
+            <p>偉建建築有限公司提供建築與土木工程整合服務，從規劃到完工，嚴謹把關每一步。</p>
+            <div class="hero-actions">
+              <button class="btn primary" onclick="scrollToSection('projects')">查看工程實績</button>
+              <button class="btn ghost" onclick="scrollToSection('contact')">取得報價</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 2 -->
+      <article class="slide"
+        style="--bg:url('https://images.unsplash.com/photo-1523419409543-a2e1c4e2a9a8?auto=format&fit=crop&w=2200&q=80');">
+        <div class="overlay">
+          <div class="container hero-inner">
+            <div class="hero-kicker">專業管理 • 透明溝通</div>
+            <h1>進度、成本、品質三位一體控管</h1>
+            <p>以制度化工務管理與分段驗收流程，確保每個里程碑可追蹤、可交付。</p>
+            <div class="hero-actions">
+              <button class="btn primary" onclick="scrollToSection('business')">了解業務範疇</button>
+              <button class="btn ghost" onclick="scrollToSection('about')">認識偉建</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 3 -->
+      <article class="slide"
+        style="--bg:url('https://images.unsplash.com/photo-1504306661389-1092f5a8b3a9?auto=format&fit=crop&w=2200&q=80');">
+        <div class="overlay">
+          <div class="container hero-inner">
+            <div class="hero-kicker">永續 • 工地安全 • 品質稽核</div>
+            <h1>讓每一項工程，成為長久的信任</h1>
+            <p>重視施工安全與現場管理，強化交付文件與售後支援，建立穩健口碑。</p>
+            <div class="hero-actions">
+              <button class="btn primary" onclick="scrollToSection('news')">查看最新消息</button>
+              <button class="btn ghost" onclick="scrollToSection('contact')">立即洽詢</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Controls -->
+      <button class="ctrl prev" aria-label="上一張" onclick="prevSlide()">‹</button>
+      <button class="ctrl next" aria-label="下一張" onclick="nextSlide()">›</button>
+
+      <!-- Dots -->
+      <div class="dots" role="tablist" aria-label="輪播指示">
+        <button class="dot is-active" aria-label="第1張" onclick="goToSlide(0)"></button>
+        <button class="dot" aria-label="第2張" onclick="goToSlide(1)"></button>
+        <button class="dot" aria-label="第3張" onclick="goToSlide(2)"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links -->
+  <section class="quick">
+    <div class="container quick-grid">
+      <a class="quick-card" href="#business">
+        <div class="q-title">業務範疇</div>
+        <div class="q-desc">土木 / 建築 / 公共工程</div>
+      </a>
+      <a class="quick-card" href="#projects">
+        <div class="q-title">工程實績</div>
+        <div class="q-desc">精選專案與案例展示</div>
+      </a>
+      <a class="quick-card" href="#contact">
+        <div class="q-title">聯絡洽詢</div>
+        <div class="q-desc">需求評估 / 報價 / 合作</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container section-split">
+      <div>
+        <h2 class="h2">公司簡介</h2>
+        <p class="lead">
+          偉建建築有限公司秉持「專業、誠信、效率」理念，投入建築與土木工程專案，
+          以制度化工務管理、施工安全與品質稽核，提供可靠的工程交付能力。
+        </p>
+
+        <div class="badges">
+          <div class="badge">
+            <div class="b-title">工務管理</div>
+            <div class="b-desc">進度排程、工種協調、現場管控</div>
+          </div>
+          <div class="badge">
+            <div class="b-title">品質把關</div>
+            <div class="b-desc">分段檢核、材料管控、驗收文件</div>
+          </div>
+          <div class="badge">
+            <div class="b-title">安全第一</div>
+            <div class="b-desc">教育訓練、巡檢制度、風險控管</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <div class="panel-title">核心承諾</div>
+        <ul class="list">
+          <li>清楚溝通與定期回報</li>
+          <li>施工流程可追蹤、可交付</li>
+          <li>工地整潔與安全措施</li>
+          <li>依約交付與售後支援</li>
+        </ul>
+        <div class="panel-foot">
+          <button class="btn small" onclick="scrollToSection('contact')">合作洽詢</button>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Business -->
+  <section id="business" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h2">業務範疇</h2>
+        <p class="lead">可依專案需求提供單項服務或整合承攬（規劃、施工、協調、完工交付）。</p>
+      </div>
+
+      <div class="cards3">
+        <div class="card">
+          <div class="card-top">
+            <div class="icon">🏗️</div>
+            <h3>建築工程</h3>
+          </div>
+          <p>新建、增建、改建、室內外整修與結構補強。</p>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <div class="icon">🛣️</div>
+            <h3>土木工程</h3>
+          </div>
+          <p>道路、排水、地坪、混凝土、基礎與外部工程等。</p>
+        </div>
+
+        <div class="card">
+          <div class="card-top">
+            <div class="icon">🏛️</div>
+            <h3>公共工程</h3>
+          </div>
+          <p>政府標案、公共設施、校園工程與驗收文件整備。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head row-between">
+        <div>
+          <h2 class="h2">工程實績</h2>
+          <p class="lead">以下為示意範例，之後可替換成你的真實工程照片與案名。</p>
+        </div>
+        <button class="btn outline" onclick="scrollToSection('contact')">索取案例資料</button>
+      </div>
+
+      <div class="projects">
+        <article class="project">
+          <div class="p-img" style="background-image:url('https://images.unsplash.com/photo-1590725121839-892b458a74fe?auto=format&fit=crop&w=1600&q=80')"></div>
+          <div class="p-body">
+            <h3>市政排水改善工程</h3>
+            <div class="meta">開挖 • 管線 • 回填 • 復舊</div>
+            <p>依現場條件調整工法，確保施工安全與交通維持。</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="p-img" style="background-image:url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1600&q=80')"></div>
+          <div class="p-body">
+            <h3>商辦空間整修工程</h3>
+            <div class="meta">隔間 • 機電協調 • 點交缺失</div>
+            <p>多工種整合協調，按期交付並完成點交與修正。</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="p-img" style="background-image:url('https://images.unsplash.com/photo-1508459855340-fb63ac591728?auto=format&fit=crop&w=1600&q=80')"></div>
+          <div class="p-body">
+            <h3>住宅新建/增建工程</h3>
+            <div class="meta">基礎 • 結構 • 外牆 • 驗收</div>
+            <p>落實分段品質檢核與材料管控，提升整體耐久度。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- Contact -->
+  <section id="contact" class="section dark">
+    <div class="container section-split">
+      <div>
+        <h2 class="h2 light">聯絡我們</h2>
+        <p class="lead light">
+          歡迎留下需求，我們將盡快與您聯繫（此表單為前端示意，若要真正收信需串接表單服務/後端）。
+        </p>
+
+        <form class="form" onsubmit="return submitForm(event)">
+          <div class="form-row">
+            <input type="text" placeholder="姓名" required />
+            <input type="tel" placeholder="電話（選填）" />
+          </div>
+          <input type="email" placeholder="Email" required />
+          <input type="text" placeholder="工程地點（城市/區域）" />
+          <textarea placeholder="需求說明（類型、規模、預計工期等）" required></textarea>
+          <button class="btn primary full" type="submit">送出訊息</button>
+          <div class="hint">提示：可用 Formspree / Netlify Forms / 自家後端讓表單真的寄信。</div>
+        </form>
+      </div>
+
+      <aside class="contact-card">
+        <h3>公司資訊</h3>
+        <p><b>公司名稱：</b>偉建建築有限公司</p>
+        <p><b>電話：</b>+852 6026 9033</p>
+        <p><b>Email：</b>beebeefivefive@gmail.com</p>
+        <p><b>地址：</b>Fo Tan</div>
+        <div class="divider"></div>
+        <p class="mini-title">服務項目</p>
+        <div class="pills">
+          <span class="pill">土木工程</span>
+          <span class="pill">建築工程</span>
+          <span class="pill">公共工程</span>
+          <span class="pill">修繕改建</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">偉建建築有限公司</div>
+        <div class="footer-sub">Weijian Construction Co., Ltd</div>
+        <div class="footer-note">品質 • 安全 • 準時交付</div>
+      </div>
+
+      <div>
+        <div class="footer-title">關於我們</div>
+        <a href="#about" class="footer-link">公司簡介</a>
+        <a href="#business" class="footer-link">業務範疇</a>
+        <a href="#projects" class="footer-link">工程實績</a>
+      </div>
+
+      <div>
+        <div class="footer-title">資訊中心</div>
+        <a href="#contact" class="footer-link">合作洽詢</a>
+        <a href="javascript:void(0)" class="footer-link">隱私權政策（可填）</a>
+      </div>
+
+      <div>
+        <div class="footer-title">聯絡方式</div>
+        <div class="footer-line">電話：+852 6026 9033</div>
+        <div class="footer-line">信箱：beebeefivefive@gmil.com</div>
+        <div class="footer-line">地址:Fo Tan</div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      © <span id="year"></span> 偉建建築有限公司. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
